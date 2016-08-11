@@ -2,7 +2,10 @@
   box-sizing:border-box;
 }
 div {
-  
+}
+
+body {
+  background-color:#00EEEE;
 }
 
 .landing-page-container {
