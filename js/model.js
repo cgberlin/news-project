@@ -76,8 +76,8 @@ function callInMap(){
 function processData(data){
   $.each(data, function(index, obj){
     console.log(obj.geometry.coordinates);
-    var latitude = obj.geometry.coordinates[0];
-    var longitude = obj.geometry.coordinates[1];
+    var latitude = obj.geometry.coordinates[1];
+    var longitude = obj.geometry.coordinates[0];
     var marker = new google.maps.Marker({
                   position: {lat: latitude, lng: longitude},
                   map: map,
