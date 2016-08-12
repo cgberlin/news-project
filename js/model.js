@@ -1,5 +1,6 @@
 var map;
 
+
 function initMap() {
   map = new google.maps.Map(document.getElementById('google-map'), {
     center: {lat: 37.09024, lng: -95.712891},
@@ -75,9 +76,22 @@ function callInMap(){
 
 function processData(data){
   $.each(data, function(index, obj){
+    console.log(data);
     console.log(obj.geometry.coordinates);
+    var headingFromNews = 'asdasdasda';
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">'+headingFromNews+'</h1>'+
+        '</div>'+
+        '</div>';
+
     var latitude = obj.geometry.coordinates[1];
     var longitude = obj.geometry.coordinates[0];
+
+    var infowindow = new google.maps.InfoWindow({
+                      content: contentString
+                    });
     var marker = new google.maps.Marker({
                   position: {lat: latitude, lng: longitude},
                   map: map,
