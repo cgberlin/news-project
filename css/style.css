@@ -52,3 +52,27 @@ body {
   top:35%;
   left:70%;
 }
+
+#google-map {
+  height:50%;
+  width:50%;
+  border:5px solid white;
+}
+
+#about-button {
+  margin-top:2rem;
+
+  color:white;
+  background-color:#33A1DE	;
+  width:15%;
+  height:4%;
+  font-family: 'Coiny', cursive;
+  border:none;
+  transition: all 200ms ease-in-out 0s;
+}
+#about-button:hover{
+  color:black;
+  background-color:#00FFFF;
+  box-shadow: 0 0 4px 4px #33A1DE;
+  border:none;
+}

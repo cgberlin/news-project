@@ -1,3 +1,21 @@
+var map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById('google-map'), {
+    center: {lat: 37.09024, lng: -95.712891},
+    zoom: 4
+  });
+}
+
+
+
+
+
+
+
+
+
+
 function animateLanding(){
   $('#landing-title').addClass('animated rollIn');
   $('#news-img-env').addClass('animated lightSpeedIn');
@@ -24,4 +42,11 @@ $('.landing-page-container').on('click', '#landing-credits', function(){
   $('#white-star1').removeClass('animated zoomInDown').addClass('animated zoomOutUp');
   $('#white-star2').removeClass('animated zoomInDown').addClass('animated zoomOutUp');
   $('#white-star3').removeClass('animated zoomInDown').addClass('animated zoomOutUp');
+  callInMap();
 });
+
+function callInMap(){
+  $('#google-map').addClass('animated rollIn').show();
+  $('#about-button').addClass('animated rollIn').show();
+  initMap();
+}
