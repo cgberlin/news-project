@@ -3,12 +3,25 @@ var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('google-map'), {
     center: {lat: 37.09024, lng: -95.712891},
-    zoom: 4
+    zoom: 1
+
   });
 }
 
+function getNews(searchedTerm){
+  $.ajax({
+      url: 'https://alertifyme-news.p.mashape.com/search.php?query=' + searchedTerm, // The URL to the API. You can get this in the API page of the API you intend to consume
+      type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
+      data: {}, // Additional parameters here
+      dataType: 'json',
+      success: function(data) { console.log(data); },
+      error: function(err) { alert(err); },
+      beforeSend: function(xhr) {
+      xhr.setRequestHeader("X-Mashape-Authorization", "i7QyNxw44UmshFKsRu1bVZikhxFSp1e22YAjsnqtPgrHNbANrX"); // Enter here your Mashape key
+      }
 
-
+  });
+}
 
 
 
@@ -48,5 +61,9 @@ $('.landing-page-container').on('click', '#landing-credits', function(){
 function callInMap(){
   $('#google-map').addClass('animated rollIn').show();
   $('#about-button').addClass('animated rollIn').show();
+  $('#prompt-user-search').addClass('animated rollIn').show();
+  $('#search-term').addClass('animated rollIn').show();
   initMap();
+  map.setMapTypeId('satellite');
+
 }
