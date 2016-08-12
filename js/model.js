@@ -9,18 +9,18 @@ function initMap() {
 }
 
 function getNews(searchedTerm){
-  $.ajax({
+  var data =  $.ajax({
       url: 'https://alertifyme-news.p.mashape.com/search.php?query=' + searchedTerm, // The URL to the API. You can get this in the API page of the API you intend to consume
       type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
       data: {}, // Additional parameters here
       dataType: 'json',
-      success: function(data) { console.log(data); },
+      success: function(data) { processData(data); },
       error: function(err) { alert(err); },
       beforeSend: function(xhr) {
       xhr.setRequestHeader("X-Mashape-Authorization", "i7QyNxw44UmshFKsRu1bVZikhxFSp1e22YAjsnqtPgrHNbANrX"); // Enter here your Mashape key
       }
-
   });
+
 }
 
 
@@ -58,12 +58,30 @@ $('.landing-page-container').on('click', '#landing-credits', function(){
   callInMap();
 });
 
+$('.landing-page-container').on('click', '#search-button', function(){
+  var searchedTerm = $('#search-term').val();
+  getNews(searchedTerm);
+});
+
 function callInMap(){
   $('#google-map').addClass('animated rollIn').show();
   $('#about-button').addClass('animated rollIn').show();
+  $('#search-button').addClass('animated rollIn').show();
   $('#prompt-user-search').addClass('animated rollIn').show();
   $('#search-term').addClass('animated rollIn').show();
   initMap();
   map.setMapTypeId('satellite');
+}
 
+function processData(data){
+  $.each(data, function(index, obj){
+    console.log(obj.geometry.coordinates);
+    var latitude = obj.geometry.coordinates[0];
+    var longitude = obj.geometry.coordinates[1];
+    var marker = new google.maps.Marker({
+                  position: {lat: latitude, lng: longitude},
+                  map: map,
+                  title: 'News'
+                });
+  });
 }

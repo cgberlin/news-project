@@ -60,7 +60,7 @@ body {
   margin:2rem;
 }
 
-#about-button {
+#about-button, #search-button {
   margin-top:1rem;
   color:white;
   background-color:#33A1DE	;
@@ -70,7 +70,7 @@ body {
   border:none;
   transition: all 200ms ease-in-out 0s;
 }
-#about-button:hover{
+#about-button:hover, #search-button:hover{
   color:black;
   background-color:#00FFFF;
   box-shadow: 0 0 4px 4px #33A1DE;
@@ -85,4 +85,8 @@ body {
   position:absolute;
   top:22%;
   border:3px solid white;
+}
+#search-button {
+  position:absolute;
+  top:27%;
 }
