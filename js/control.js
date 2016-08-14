@@ -42,7 +42,7 @@ function callInMap(){
   $('#prompt-user-search').addClass('animated rollIn').show();
   $('#search-term').addClass('animated rollIn').show();
   initMap();
-  map.setMapTypeId('satellite');
+  
 }
 
 $('.landing-page-container').on('click', '#about-button', function(){
