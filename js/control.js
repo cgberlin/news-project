@@ -14,6 +14,7 @@ $('.landing-page-container').on('click', '#landing-title', function(){
     $('#white-star1').addClass('animated zoomInDown').show().delay(300).queue(function(next) {
       $('#white-star2').addClass('animated zoomInDown').show().delay(200).queue(function(next) {
         $('#white-star3').addClass('animated zoomInDown').show();
+        $('#news-img-env').hide();
           next();
         next();
     next();
@@ -27,6 +28,7 @@ $('.landing-page-container').on('click', '#landing-credits', function(){
   $('#white-star1').removeClass('animated zoomInDown').addClass('animated zoomOutUp');
   $('#white-star2').removeClass('animated zoomInDown').addClass('animated zoomOutUp');
   $('#white-star3').removeClass('animated zoomInDown').addClass('animated zoomOutUp');
+  $('.landing-page-container').css('justify-content', 'space-between');
   callInMap();
 });
 
@@ -42,7 +44,7 @@ function callInMap(){
   $('#prompt-user-search').addClass('animated rollIn').show();
   $('#search-term').addClass('animated rollIn').show();
   initMap();
-  
+
 }
 
 $('.landing-page-container').on('click', '#about-button', function(){
