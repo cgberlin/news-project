@@ -4,7 +4,7 @@
 body {
   background-color:#00EEEE;
 }
-#landing-credits, #prompt-user-search, #landing-title, #about-button, #search-button {
+#landing-credits, #prompt-user-search, #landing-title, #about-button, #search-button, #about-div {
   font-family: 'Coiny', cursive;
   color:white;
 }
@@ -52,8 +52,10 @@ body {
   border:5px solid white;
   margin:2rem;
 }
-
-#about-button, #search-button {
+#about-button {
+  margin:2rem;
+}
+#about-button, #search-button, #close-about {
   margin-top:1rem;
   background-color:#33A1DE	;
   width:15%;
@@ -61,7 +63,7 @@ body {
   border:none;
   transition: all 200ms ease-in-out 0s;
 }
-#about-button:hover, #search-button:hover{
+#about-button:hover, #search-button:hover, #close-about:hover{
   color:black;
   background-color:#00FFFF;
   box-shadow: 0 0 4px 4px #33A1DE;
@@ -80,6 +82,28 @@ body {
 #search-button {
   top:17rem;
 }
-#white-star1, #white-star2, #white-star3, #landing-credits, #prompt-user-search, #search-term, #search-button, #google-map, #about-button, #about-div{
+#white-star1, #white-star2, #white-star3, #landing-credits, #prompt-user-search, #search-term, #search-button, #google-map, #about-button, #about-div {
   display:none;
+}
+#about-div {
+  position:absolute;
+  z-index:2;
+  border:15px solid #00EEEE;
+  background-color:#008B8B;
+  height:100vh;
+  width:100vw;
+  top:0;
+  flex-flow:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+#about-div h1 {
+  font-size:10rem;
+  text-decoration:underline;
+  padding:5rem;
+}
+#about-div p {
+  font-size:3rem;
+  padding:2rem;
 }

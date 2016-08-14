@@ -44,3 +44,11 @@ function callInMap(){
   initMap();
   map.setMapTypeId('satellite');
 }
+
+$('.landing-page-container').on('click', '#about-button', function(){
+  $('#about-div').addClass('animated fadeInDown').show();
+});
+
+$('body').on('click', '#close-about', function(){
+  $('#about-div').removeClass('animated fadeInDown').addClass('animated fadeOutUp');
+});
