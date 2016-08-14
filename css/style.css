@@ -116,16 +116,12 @@ body {
   #landing-credits, #prompt-user-search {
     font-size:4.5rem;
   }
-  #search-term {
-    top:9rem;
+  #search-term, #search-button {
+    top:0;
     margin: 0 auto;
     position:relative;
   }
-  #search-button {
-    top:12rem;
-    margin: 0 auto;
-    position:relative;
-  }
+
   #google-map {
     width:90%;
   }
