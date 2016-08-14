@@ -11,7 +11,6 @@ body {
 .landing-page-container {
   background-color:#00EEEE;
   display:flex;
-  display: -webkit-flex;
   align-items:center;
   justify-content:center;
   height:100vh;
@@ -46,7 +45,6 @@ body {
   top:35%;
   left:70%;
 }
-
 #google-map {
   height:75%;
   width:75%;
@@ -70,18 +68,11 @@ body {
   box-shadow: 0 0 4px 4px #33A1DE;
   border:none;
 }
-#prompt-user-search, #search-term, #search-button, #white-star1, #white-star2, #white-star3 {
+#white-star1, #white-star2, #white-star3 {
   position:absolute;
 }
-#prompt-user-search {
-  top:2rem;
-}
 #search-term {
-  top:13rem;
   border:3px solid white;
-}
-#search-button {
-  top:17rem;
 }
 #white-star1, #white-star2, #white-star3, #landing-credits, #prompt-user-search, #search-term, #search-button, #google-map, #about-button, #about-div {
   display:none;
@@ -116,12 +107,15 @@ body {
   #landing-credits, #prompt-user-search {
     font-size:4.5rem;
   }
-  #search-term, #search-button, #prompt-user-search {
+  #search-term, #search-button {
     top:0;
     margin: 0 auto;
     position:relative;
   }
-
+  #prompt-user-search {
+    position:relative;
+    top:-6rem;
+  }
   #google-map {
     width:90%;
   }
