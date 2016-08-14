@@ -107,3 +107,32 @@ body {
   font-size:3rem;
   padding:2rem;
 }
+
+@media only screen and (max-width: 600px) {
+  #landing-title {
+    font-size:6rem;
+  }
+  #landing-credits, #prompt-user-search {
+    font-size:4.5rem;
+  }
+  #search-term {
+    top:9rem;
+  }
+  #search-button {
+    top:12rem;
+  }
+  #google-map {
+    width:90%;
+  }
+  #about-div h1 {
+    font-size:5rem;
+    padding:2rem;
+  }
+  #about-div p {
+    font-size:2rem;
+    padding:.7rem;
+  }
+  #about-button, #search-button, #close-about {
+    font-size:1rem;
+  }
+}
