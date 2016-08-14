@@ -119,10 +119,12 @@ body {
   #search-term {
     top:9rem;
     margin: 0 auto;
+    position:relative;
   }
   #search-button {
     top:12rem;
     margin: 0 auto;
+    position:relative;
   }
   #google-map {
     width:90%;
