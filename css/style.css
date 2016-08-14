@@ -80,3 +80,6 @@ body {
 #search-button {
   top:17rem;
 }
+#white-star1, #white-star2, #white-star3, #landing-credits, #prompt-user-search, #search-term, #search-button, #google-map, #about-button, #about-div{
+  display:none;
+}
