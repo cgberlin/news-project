@@ -137,4 +137,9 @@ body {
   #about-button, #search-button, #close-about {
     font-size:1rem;
   }
+  .landing-page-container {
+
+    align-items:center;
+    justify-content:center;
+  }
 }
