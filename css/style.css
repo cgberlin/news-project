@@ -11,6 +11,7 @@ body {
 .landing-page-container {
   background-color:#00EEEE;
   display:flex;
+  display: -webkit-flex;
   align-items:center;
   justify-content:center;
   height:100vh;
@@ -125,7 +126,6 @@ body {
   }
   #google-map {
     width:90%;
-    margin:0 auto;
   }
   #about-div h1 {
     font-size:5rem;
@@ -138,9 +138,5 @@ body {
   #about-button, #search-button, #close-about {
     font-size:1rem;
   }
-  .landing-page-container {
-    display:block;
-    align-items:center;
-    justify-content:center;
-  }
+
 }
