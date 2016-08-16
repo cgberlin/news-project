@@ -99,7 +99,6 @@ body {
   font-size:3rem;
   padding:2rem;
 }
-
 @media only screen and (max-width: 600px) {
   #landing-title {
     font-size:6rem;
@@ -130,5 +129,9 @@ body {
   #about-button, #search-button, #close-about {
     font-size:1rem;
   }
-
+}
+@media screen and ( max-height: 700px ){
+    #prompt-user-search{
+      margin-top:-3rem;
+    }
 }
