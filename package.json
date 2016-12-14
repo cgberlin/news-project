@@ -8,7 +8,7 @@
     "build": "npm run clean && npm run mkdir && npm run build:html && npm run copy-dir && npm run build:js",
     "watch": "npm run watch:html & npm run watch:css",
     "clean": "rm -rf build",
-    "copy-dir": "cp -rf images build && cp -rf node_modules build && cp css/animate.css build/ && cp css/normalize.css build/ && cp css/style.css build/ && cp js/model.js build/",
+    "copy-dir": "cp -rf images build && cp -rf node_modules build && cp semantic/dist/semantic.min.css build/ && cp semantic/dist/semantic.min.js build/ && cp css/normalize.css build/ && cp css/style.css build/ && cp js/model.js build/",
     "build:html": "npm run clean:html && cp index.html build/",
     "watch:html": "npm run build:html && chokidar index.html -c 'npm run build:html'",
     "clean:html": "rm -f build/index.html",
